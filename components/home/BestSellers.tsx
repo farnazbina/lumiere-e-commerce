@@ -24,7 +24,7 @@ export default function BestSellers() {
       <div className="grid grid-cols-2 gap-x-4 gap-y-10 lg:grid-cols-4 lg:gap-6">
         {products.map((product) => (
           <article key={product.name} className="group">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-muted">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-white">
               <Link href={`/products/${product.id}`} aria-label={`View ${product.name}`} className="absolute inset-0 z-10">
                 <Image src={product.image} alt={product.name} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-contain p-5 mix-blend-multiply dark:mix-blend-normal transition-transform duration-500 group-hover:scale-105 sm:p-8" />
               </Link>

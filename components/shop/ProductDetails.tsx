@@ -49,7 +49,10 @@ export default function ProductDetails({ productId }: { productId: string }) {
         <section className="pt-2 lg:sticky lg:top-8 lg:h-fit" aria-labelledby="product-title">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted-foreground">{product.category}</p>
           <h1 id="product-title" className="mt-4 font-serif text-4xl tracking-[-0.025em] text-foreground sm:text-5xl">{product.name}</h1>
-          <div className="mt-5 flex items-center gap-3"><div className="flex gap-1 text-gold" aria-label="5 out of 5 stars">{Array.from({ length: 5 }).map((_, index) => <FiStar key={index} className="size-4 fill-current" />)}</div><span className="text-xs text-muted-foreground">Sample rating</span></div>
+          <div className="mt-5 flex items-center gap-3">
+            <div className="flex gap-1 text-gold" aria-label="5 out of 5 stars">{Array.from({ length: 5 }).map((_, index) => <FiStar key={index} className="size-4 fill-current" />)}</div>
+            <span className="text-xs text-muted-foreground">Sample rating</span>
+          </div>
           <p className="mt-7 text-2xl font-medium text-brand">${product.price.toFixed(2)}</p>
           <p className="mt-7 max-w-xl text-sm leading-7 text-muted-foreground">A timeless expression of modern elegance, thoughtfully crafted in polished 18k gold. Designed with graceful proportions and a luminous finish for effortless everyday wear.</p>
 

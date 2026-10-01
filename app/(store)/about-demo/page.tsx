@@ -1,9 +1,56 @@
 import Link from "next/link";
 
 export default function Page() {
-  return <main className="mx-auto max-w-3xl px-5 py-16"><h1 className="font-serif text-4xl">About this demo</h1><p className="mt-6 text-lg leading-8 text-muted-foreground">Lumière is a portfolio project. Products, ratings, prices, and store benefits are illustrative. This website does not sell or ship jewelry.</p><div className="mt-10 space-y-8">
-    <section><h2 className="font-serif text-2xl">Try the shopping flow</h2><p className="mt-3 leading-7 text-muted-foreground">Browse products, add items to your cart, and sign in to save favorites and a sample delivery address. Demo checkout creates an order in your account. No payment information is requested, no money is charged, and no delivery is arranged. Use fictional address and phone details when trying the demo.</p></section>
-    <section><h2 className="font-serif text-2xl">Where your information is saved</h2><p className="mt-3 leading-7 text-muted-foreground">Sign-in credentials and profile fields are managed through Supabase Auth. Your session uses browser cookies. Addresses, wishlist items, and demo orders are saved in local browser storage for your account; they do not sync to another browser or device. Clearing site data removes those saved items. Signing out does not delete them from this browser. Your cart is temporary and resets on a full page reload.</p></section>
-    <section><h2 className="font-serif text-2xl">Email confirmation and account access</h2><p className="mt-3 leading-7 text-muted-foreground">If confirmation is enabled, follow the link in your registration email before signing in. You can update your profile or sign out from the account dashboard. Password recovery is available from the login page.</p><Link href="/auth/login" className="mt-4 inline-block text-brand underline">Go to login</Link></section>
-  </div></main>;
+  return (
+    <main className="mx-auto max-w-3xl px-5 py-16">
+      <h1 className="font-serif text-4xl">About this demo</h1>
+      <p className="mt-6 text-lg leading-8 text-muted-foreground">
+        Lumière is a portfolio project. Products, ratings, prices, and store
+        benefits are illustrative. This website does not sell or ship jewelry.
+      </p>
+      <div className="mt-10 space-y-8">
+        <section>
+          <h2 className="font-serif text-2xl">Try the shopping flow</h2>
+          <p className="mt-3 leading-7 text-muted-foreground">
+            Browse products, add items to your cart, and sign in to save
+            favorites and a sample delivery address. Demo checkout creates an
+            order in your account. No payment information is requested, no money
+            is charged, and no delivery is arranged. Use fictional address and
+            phone details when trying the demo.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-serif text-2xl">
+            Where your information is saved
+          </h2>
+          <p className="mt-3 leading-7 text-muted-foreground">
+            Sign-in credentials and profile fields are managed through Supabase
+            Auth. Your session uses browser cookies. Addresses, wishlist items,
+            and demo orders are saved in local browser storage for your account;
+            they do not sync to another browser or device. Clearing site data
+            removes those saved items. Signing out does not delete them from
+            this browser. Your cart is temporary and resets on a full page
+            reload.
+          </p>
+        </section>
+        <section>
+          <h2 className="font-serif text-2xl">
+            Email confirmation and account access
+          </h2>
+          <p className="mt-3 leading-7 text-muted-foreground">
+            If confirmation is enabled, follow the link in your registration
+            email before signing in. You can update your profile or sign out
+            from the account dashboard. Password recovery is available from the
+            login page.
+          </p>
+          <Link
+            href="/auth/login"
+            className="mt-4 inline-block text-brand underline"
+          >
+            Go to login
+          </Link>
+        </section>
+      </div>
+    </main>
+  );
 }
